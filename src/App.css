@@ -1,0 +1,306 @@
+/* Premium Master Themes Configuration */
+:root {
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* 1. VS CODE DARK THEME (Default) */
+.theme-vs-dark {
+  --bg-header: #0f172a;
+  --bg-sidebar: #0b0f19;
+  --bg-workspace: #111827;
+  --bg-tabs: #0b0f19;
+  --text-main: #f1f5f9;
+  --accent-color: #38bdf8;
+  --border-color: #1f2937;
+  --console-bg: #090d16;
+}
+
+/* 2. DRACULA THEME */
+.theme-dracula {
+  --bg-header: #1e1f29;
+  --bg-sidebar: #282a36;
+  --bg-workspace: #282a36;
+  --bg-tabs: #1e1f29;
+  --text-main: #f8f8f2;
+  --accent-color: #ff79c6;
+  --border-color: #44475a;
+  --console-bg: #191a21;
+}
+
+/* 3. MONOKAI THEME */
+.theme-monokai {
+  --bg-header: #1a1a1a;
+  --bg-sidebar: #272822;
+  --bg-workspace: #272822;
+  --bg-tabs: #1e1f1c;
+  --text-main: #f8f8f2;
+  --accent-color: #a6e22e;
+  --border-color: #3e3d32;
+  --console-bg: #141411;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-workspace);
+  color: var(--text-main);
+}
+
+/* Logo & Branding Header Layout */
+.app-header {
+  background-color: var(--bg-header);
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Control Panel Buttons */
+.control-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.theme-dropdown {
+  background-color: var(--bg-sidebar);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-btn {
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn { background-color: #334155; color: white; }
+.preview-btn { background-color: #0284c7; color: white; }
+.run-btn { background-color: #10b981; color: white; }
+.nav-btn:hover { filter: brightness(1.2); }
+
+/* Main Screen Grid Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* File Explorer Sidebar */
+.file-explorer {
+  width: 220px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.file-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.file-item {
+  padding: 8px 12px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.15s;
+}
+
+.file-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.file-item.selected {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.auto-save-tag {
+  font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Code Workspace Area styling */
+.workspace-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+}
+
+.tab-navigation {
+  display: flex;
+  background-color: var(--bg-tabs);
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid var(--border-color);
+}
+
+.tab-btn.active {
+  color: white;
+  background-color: var(--bg-workspace);
+}
+.tab-btn.active.html-tab { border-top: 3px solid #ef4444; }
+.tab-btn.active.css-tab { border-top: 3px solid #3b82f6; }
+.tab-btn.active.js-tab { border-top: 3px solid #eab308; }
+
+.editor-workspace {
+  flex: 1;
+  background-color: var(--bg-workspace);
+  display: flex;
+}
+
+/* Output Console Panel Style */
+.output-console-panel {
+  height: 160px;
+  background-color: var(--console-bg);
+  border-top: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.console-title-bar {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.clear-console-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.clear-console-btn:hover { color: white; }
+
+.console-body {
+  flex: 1;
+  padding: 10px 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: #a7f3d0;
+  overflow-y: auto;
+}
+
+.console-line {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* Right Side Live Preview Container */
+.preview-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.preview-header-bar {
+  background-color: var(--bg-tabs);
+  color: #94a3b8;
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Status Bar design */
+.status-bar {
+  background-color: var(--bg-header);
+  border-top: 1px solid var(--border-color);
+  padding: 4px 16px;
+  font-size: 0.78rem;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-left, .status-right {
+  display: flex;
+  gap: 16px;
+}
+
+.storage-badge {
+  color: #10b981;
+}
