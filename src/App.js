@@ -11,7 +11,8 @@ const INITIAL_HTML = `<!doctype html>
       <p>Edit your code via tabs or File Explorer and click Run!</p>
       <button onclick="showSuccessAlert()">Click Me</button>
     </div>
-  </body>
+    <script src="js/script.js"></script>
+</body>
 </html>`;
 
 const INITIAL_CSS = `body {
