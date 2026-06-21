@@ -36,7 +36,7 @@ function Preview({ html, css, js }) {
       <iframe
         srcDoc={srcDoc}
         title="output-window"
-        sandbox="allow-scripts"
+        sandbox="allow-scripts allow-modals allow-same-origin"
         frameBorder="0"
         width="100%"
         height="100%"
